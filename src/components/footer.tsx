@@ -21,7 +21,7 @@ export default function Footer() {
             </div>
 
             <div>
-              <p className="text-xl pt-9">
+              <p className="text-xl py-20">
                 All rights reserved © Muni Kang 2024
               </p>
             </div>

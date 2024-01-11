@@ -1,3 +1,10 @@
-export default function Home({ children }: { children: React.ReactNode }) {
-  return <main>main</main>;
+import Hero from '@/components/hero';
+import Image from 'next/image';
+
+export default function HomePage() {
+  return (
+    <>
+      <Hero />
+    </>
+  );
 }

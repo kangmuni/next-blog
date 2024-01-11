@@ -2,11 +2,11 @@ import Link from 'next/link';
 
 export default function Header() {
   return (
-    <header className="flex justify-between p-9">
+    <header className="flex justify-between p-9 pb-0">
       <Link href="/" className="text-4xl font-semibold">
         Muni's Blog
       </Link>
-      <nav className="text-2xl font-normal text-slate-600">
+      <nav className="text-xl font-normal text-slate-600 font-semibold">
         <Link href="/" className="pr-4">
           Home
         </Link>
