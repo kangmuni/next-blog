@@ -1,4 +1,4 @@
-import Posts from '@/components/posts';
+import Posts from '@/components/FeaturedPosts';
 
 export default function PostsPage() {
   return <Posts />;

@@ -6,7 +6,13 @@ export type Posts = {
   title: string;
   date: string;
   path: string;
+  featured: boolean;
 };
+
+export async function getFeaturedPosts(): Promise<Posts[]> {
+  return getPosts() //
+    .then((posts) => posts.filter((post) => post.featured));
+}
 
 export async function getPosts(): Promise<Posts[]> {
   const filePath = path.join(process.cwd(), 'data', 'posts.json');

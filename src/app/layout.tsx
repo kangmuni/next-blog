@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
-import Link from 'next/link';
-
 import { Open_Sans } from 'next/font/google';
+
 import './globals.css';
+
 import Header from '@/components/header';
 import Footer from '@/components/footer';
 

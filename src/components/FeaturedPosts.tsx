@@ -1,10 +1,10 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { getPosts } from '../../service/posts';
+import { getFeaturedPosts, getPosts } from '../../service/posts';
 import PostsGrid from './postsGrid';
 
-export default async function Posts() {
-  const posts = await getPosts();
+export default async function FeaturedPosts() {
+  const featuredPosts = await getFeaturedPosts();
 
   return (
     <section className="w-9/12 mb-9">
@@ -25,7 +25,7 @@ export default async function Posts() {
           </li>
         </ul>
 
-        <PostsGrid posts={posts} />
+        <PostsGrid posts={featuredPosts} />
       </article>
     </section>
   );
