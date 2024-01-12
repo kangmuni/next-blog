@@ -3,7 +3,7 @@ import Link from 'next/link';
 export default function Footer() {
   return (
     <footer>
-      <div className="flex justify-center">
+      <div className="flex justify-center pt-20 border-t-[1px]">
         <section className="flex flex-row justify-center w-6/12">
           <article>
             <div className="w-4/5">

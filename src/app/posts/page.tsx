@@ -1,3 +1,5 @@
+import Posts from '@/components/posts';
+
 export default function PostsPage() {
-  return <main>Posts</main>;
+  return <Posts />;
 }

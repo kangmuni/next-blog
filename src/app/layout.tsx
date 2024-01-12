@@ -22,7 +22,7 @@ export default function RootLayout({
     <html lang="en" className={sans.className}>
       <body className="flex flex-col w-full max-w-screen-2xl mx-auto">
         <Header />
-        <main className="flex justify-center">{children}</main>
+        <main className="flex flex-col items-center">{children}</main>
         <Footer />
       </body>
     </html>
