@@ -3,7 +3,7 @@ import Link from 'next/link';
 export default function Footer() {
   return (
     <footer>
-      <div className="flex justify-center pt-20 border-t-[1px]">
+      <div className="flex justify-center pt-44 border-t-[1px]">
         <section className="flex flex-row justify-center w-6/12">
           <article>
             <div className="w-4/5">
@@ -21,7 +21,7 @@ export default function Footer() {
             </div>
 
             <div>
-              <p className="text-xl py-20">
+              <p className="text-lg py-20">
                 All rights reserved © Muni Kang 2024
               </p>
             </div>
@@ -29,8 +29,8 @@ export default function Footer() {
         </section>
 
         <section>
-          <p className="text-xl font-semibold pb-4">Sitemap</p>
-          <ul className="text-xl text-slate-600 flex flex-col">
+          <p className="text-lg font-semibold pb-4">Sitemap</p>
+          <ul className="text-lg text-slate-600 flex flex-col">
             <Link href="/" className="pb-3">
               Home
             </Link>

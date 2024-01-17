@@ -14,6 +14,11 @@ export async function getFeaturedPosts(): Promise<Posts[]> {
     .then((posts) => posts.filter((post) => post.featured));
 }
 
+export async function getNonFeaturedPosts(): Promise<Posts[]> {
+  return getAllPosts() //
+    .then((posts) => posts.filter((post) => !post.featured));
+}
+
 export async function getAllPosts(): Promise<Posts[]> {
   const filePath = path.join(process.cwd(), 'data', 'posts.json');
   const data = await fs.readFile(filePath, 'utf-8');

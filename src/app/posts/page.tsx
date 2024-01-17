@@ -1,4 +1,4 @@
-import PostsGrid from '@/components/postsGrid';
+import PostsGrid from '@/components/PostsGrid';
 import { getAllPosts } from '../../../service/posts';
 
 export default async function PostsPage() {
