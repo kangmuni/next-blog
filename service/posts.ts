@@ -7,6 +7,7 @@ export type Posts = {
   date: string;
   path: string;
   featured: boolean;
+  contents: string;
 };
 
 export async function getFeaturedPosts(): Promise<Posts[]> {
@@ -27,5 +28,5 @@ export async function getAllPosts(): Promise<Posts[]> {
 
 export async function getPost(id: string): Promise<Posts | undefined> {
   const posts = await getAllPosts();
-  return posts.find((item) => String(item.number) === id);
+  return posts.find((item) => 'topics' + item.number === id);
 }
