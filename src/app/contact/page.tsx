@@ -1,3 +1,9 @@
+import ContactInfo from '@/components/ContactInfo';
+
 export default function ContactPage() {
-  return <main>contact</main>;
+  return (
+    <main className="flex flex-col items-center">
+      <ContactInfo />
+    </main>
+  );
 }

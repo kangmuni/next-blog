@@ -8,7 +8,7 @@ export default function PostLayout({
   return (
     <main className="flex justify-center">
       <Link href={'/'} className="cursor-pointer text-xl font-medium">
-        <i>←</i>
+        <span className="text-3xl font-bold">←</span>
         <span>&nbsp;&nbsp;&nbsp;Back to home</span>
       </Link>
       <article>{children}</article>
