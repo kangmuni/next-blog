@@ -6,8 +6,8 @@ export default function PostLayout({
   children: React.ReactNode;
 }) {
   return (
-    <main>
-      <Link href={'/posts'} className="cursor-pointer text-xl font-semiblod">
+    <main className="flex justify-center">
+      <Link href={'/'} className="cursor-pointer text-xl font-medium">
         <i>←</i>
         <span>&nbsp;&nbsp;&nbsp;Back to home</span>
       </Link>

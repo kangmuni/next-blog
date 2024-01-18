@@ -1,7 +1,9 @@
 import { redirect } from 'next/navigation';
 import Image from 'next/image';
 
-import { getPost } from '../../../../service/posts';
+import { getPostData } from '../../../../service/posts';
+import MakrkdownViewer from '@/components/MarkdownViewer';
+import Link from 'next/link';
 
 type Props = {
   params: {
@@ -10,28 +12,26 @@ type Props = {
 };
 
 export default async function PostPage({ params: { slug } }: Props) {
-  const post = await getPost(slug);
+  const post = await getPostData(slug);
 
   if (!post) redirect('/posts');
 
   return (
-    <section>
-      <div className="text-center">
-        <div className="mb-20">
-          <h1 className="text-4xl font-bold mb-4">{post?.title}</h1>
-          <h3 className="text-xl font-medium text-slate-400">{post?.date}</h3>
-        </div>
-
-        <Image
-          src={`/images/${post?.path}`}
-          alt={post?.title}
-          width="500"
-          height="550"
-          className="m-2 rounded-md m-auto"
-        />
-
-        <p className="text-xl my-24">{post?.contents}</p>
+    <section className="text-center my-9 mb-44">
+      <div className="mb-9">
+        <h1 className="text-4xl font-bold mb-4">{post?.title}</h1>
+        <h3 className="text-xl font-medium text-slate-400">{post?.date}</h3>
       </div>
+
+      <Image
+        className="rounded-md mb-9 m-auto"
+        src={`/images/topic3.avif`}
+        alt={post?.title}
+        width="500"
+        height="550"
+      />
+
+      <MakrkdownViewer content={post?.content} />
     </section>
   );
 }

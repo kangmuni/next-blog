@@ -10,9 +10,9 @@ export default function PostsCard({
   post: { number, title, date, path },
 }: Props) {
   return (
-    <Link href={`posts/topics${number}`}>
+    <Link href={`posts/topic${number}`}>
       <Image
-        src={`/images/${path}`}
+        src={`/images/topic3.avif`}
         alt={title}
         width="330"
         height="280"

@@ -3,64 +3,63 @@
     "number": 1,
     "title": "JavaScript",
     "date": "November 31, 2023",
-    "path": "topic3.avif",
-    "featured": true,
-    "contents": "React's useRef hook is a versatile tool that goes beyond just accessing DOM elements. It provides a way to persist values across renders without triggering a re-render itself. In this blog post, we'll dive into the proper usage of useRef in React, covering its fundamentals, common use cases, and best practices."
+    "path": "topic1",
+    "featured": true
   },
   {
     "number": 2,
     "title": "JavaScript",
     "date": "March 11, 2023",
-    "path": "topic3.avif",
-    "featured": false,
-    "contents": "React's useRef hook is a versatile tool that goes beyond just accessing DOM elements. It provides a way to persist values across renders without triggering a re-render itself. In this blog post, we'll dive into the proper usage of useRef in React, covering its fundamentals, common use cases, and best practices."
+    "path": "topic2",
+    "featured": false
   },
   {
     "number": 3,
     "title": "TypeScript",
     "date": "Febrary 27, 2023",
-    "path": "topic3.avif",
-    "featured": true,
-    "contents": "React's useRef hook is a versatile tool that goes beyond just accessing DOM elements. It provides a way to persist values across renders without triggering a re-render itself. In this blog post, we'll dive into the proper usage of useRef in React, covering its fundamentals, common use cases, and best practices."
+    "path": "topic3",
+    "featured": true
   },
   {
     "number": 4,
     "title": "TypeScript",
     "date": "June 19, 2023",
-    "path": "topic3.avif",
-    "featured": false,
-    "contents": "React's useRef hook is a versatile tool that goes beyond just accessing DOM elements. It provides a way to persist values across renders without triggering a re-render itself. In this blog post, we'll dive into the proper usage of useRef in React, covering its fundamentals, common use cases, and best practices."
+    "path": "topic4",
+    "featured": false
   },
   {
     "number": 5,
     "title": "React",
     "date": "September 23, 2023",
-    "path": "topic3.avif",
-    "featured": true,
-    "contents": "React's useRef hook is a versatile tool that goes beyond just accessing DOM elements. It provides a way to persist values across renders without triggering a re-render itself. In this blog post, we'll dive into the proper usage of useRef in React, covering its fundamentals, common use cases, and best practices."
+    "path": "topic5",
+    "featured": true
   },
   {
     "number": 6,
     "title": "React",
     "date": "October 14, 2023",
-    "path": "topic3.avif",
-    "featured": false,
-    "contents": "React's useRef hook is a versatile tool that goes beyond just accessing DOM elements. It provides a way to persist values across renders without triggering a re-render itself. In this blog post, we'll dive into the proper usage of useRef in React, covering its fundamentals, common use cases, and best practices."
+    "path": "topic6",
+    "featured": false
   },
   {
     "number": 7,
     "title": "Next.js",
     "date": "January 07, 2023",
-    "path": "topic3.avif",
-    "featured": true,
-    "contents": "React's useRef hook is a versatile tool that goes beyond just accessing DOM elements. It provides a way to persist values across renders without triggering a re-render itself. In this blog post, we'll dive into the proper usage of useRef in React, covering its fundamentals, common use cases, and best practices."
+    "path": "topic7",
+    "featured": true
   },
   {
     "number": 8,
     "title": "Next.js",
     "date": "April 02, 2023",
-    "path": "topic3.avif",
-    "featured": false,
-    "contents": "React's useRef hook is a versatile tool that goes beyond just accessing DOM elements. It provides a way to persist values across renders without triggering a re-render itself. In this blog post, we'll dive into the proper usage of useRef in React, covering its fundamentals, common use cases, and best practices."
+    "path": "topic8",
+    "featured": false
+  },
+  {
+    "number": 9,
+    "title": "Next.js",
+    "date": "December 98, 2023",
+    "path": "topic9",
+    "featured": false
   }
 ]
