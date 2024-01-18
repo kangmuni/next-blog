@@ -6,7 +6,7 @@ export default function Header() {
       <Link href="/" className="text-3xl font-semibold">
         Muni's Blog
       </Link>
-      <nav className="text-lg text-slate-500 font-semibold">
+      <nav className="text-lg text-slate-500 font-medium">
         <Link href="/" className="pr-4">
           Home
         </Link>

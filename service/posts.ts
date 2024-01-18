@@ -25,7 +25,7 @@ export async function getAllPosts(): Promise<Posts[]> {
   return JSON.parse(data);
 }
 
-// export async function getPost(id: string): Promise<Posts | undefined> {
-//   const products = await getPosts();
-//   return products.find((item) => item.id === id);
-// }
+export async function getPost(id: string): Promise<Posts | undefined> {
+  const posts = await getAllPosts();
+  return posts.find((item) => String(item.number) === id);
+}
