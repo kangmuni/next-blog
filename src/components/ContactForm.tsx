@@ -1,9 +1,12 @@
 'use client';
 
+import { ChangeEvent, FormEvent, useState } from 'react';
 import Image from 'next/image';
 
 import ContactProfileImg from '../../public/images/muni3.png';
-import { ChangeEvent, FormEvent, useState } from 'react';
+
+import Banner, { BannerData } from './Banner';
+import sendContactEmail from '../../service/contact';
 
 type Form = {
   from: string;
@@ -11,12 +14,16 @@ type Form = {
   message: string;
 };
 
+const DEFAULT_DATA = {
+  from: '',
+  title: '',
+  message: '',
+};
+
 export default function ContactForm() {
-  const [form, setForm] = useState<Form>({
-    from: '',
-    title: '',
-    message: '',
-  });
+  const [form, setForm] = useState<Form>(DEFAULT_DATA);
+
+  const [banner, setBanner] = useState<BannerData | null>(null);
 
   const onChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -25,6 +32,25 @@ export default function ContactForm() {
 
   const onSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    sendContactEmail(form) //
+      .then(() => {
+        setBanner({
+          message: '메일 전송에 성공했어요.',
+          state: 'success',
+        });
+        setForm(DEFAULT_DATA);
+      })
+      .catch(() => {
+        setBanner({
+          message: '메일 전송에 실패했어요.',
+          state: 'error',
+        });
+      })
+      .finally(() => {
+        setTimeout(() => {
+          setBanner(null);
+        }, 3000);
+      });
   };
 
   return (
@@ -39,7 +65,7 @@ export default function ContactForm() {
         />
       </div>
 
-      <form className="flex flex-col w-3/5 ml-4" onSubmit={onSubmit}>
+      <form className="flex flex-col w-3/5" onSubmit={onSubmit}>
         <div className="flex flex-col mb-4">
           <label htmlFor="from" className="font-semibold">
             Your Email Adress
@@ -93,6 +119,8 @@ export default function ContactForm() {
         <button className="p-3 bg-zinc-300 text-white rounded text-extrabold text-lg">
           Send
         </button>
+
+        {banner && <Banner banner={banner} />}
       </form>
     </section>
   );

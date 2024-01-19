@@ -5,7 +5,7 @@ import HomeProfileImg from '../../public/images/muni2.png';
 export default function Hero() {
   return (
     <section className="flex w-9/12 items-center h-screen">
-      <div className="w-4/5">
+      <div className="w-4/5 ">
         <p className="text-4xl font-semibold pb-8">Welcome to my blog 🥨</p>
         <p className="text-4xl text-slate-600 pb-8">
           Find the latest of my writing here.
