@@ -1,15 +1,24 @@
 import { redirect } from 'next/navigation';
 import Image from 'next/image';
+import { Metadata } from 'next';
 
 import { getPostData } from '../../../../service/posts';
 import MakrkdownViewer from '@/components/MarkdownViewer';
-import Link from 'next/link';
 
 type Props = {
   params: {
     slug: string;
   };
 };
+
+export async function generateMetadata({
+  params: { slug },
+}: Props): Promise<Metadata> {
+  const { title } = await getPostData(slug);
+  return {
+    title,
+  };
+}
 
 export default async function PostPage({ params: { slug } }: Props) {
   const post = await getPostData(slug);
