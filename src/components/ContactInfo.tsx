@@ -1,6 +1,6 @@
 import Image from 'next/image';
 
-import MessageImg from '../../public/images/message.webp';
+import MessageProfileImg from '../../public/images/message.webp';
 
 export default function ContactInfo() {
   return (
@@ -18,7 +18,7 @@ export default function ContactInfo() {
       </div>
 
       <Image
-        src={MessageImg}
+        src={MessageProfileImg}
         alt={'contactMe'}
         width="400"
         height="400"
