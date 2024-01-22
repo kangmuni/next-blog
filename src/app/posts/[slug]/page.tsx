@@ -2,7 +2,7 @@ import { redirect } from 'next/navigation';
 import Image from 'next/image';
 import { Metadata } from 'next';
 
-import { getPostData } from '../../../../service/posts';
+import { getFeaturedPosts, getPostData } from '../../../../service/posts';
 import MakrkdownViewer from '@/components/MarkdownViewer';
 
 type Props = {
@@ -43,4 +43,11 @@ export default async function PostPage({ params: { slug } }: Props) {
       <MakrkdownViewer content={post?.content} />
     </section>
   );
+}
+
+export async function generateStaticParams() {
+  const posts = await getFeaturedPosts();
+  return posts.map((post) => {
+    slug: post.path;
+  });
 }

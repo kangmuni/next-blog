@@ -11,7 +11,7 @@ export default async function CarouselPosts() {
       <p className="text-xl font-semibold pb-6">📎 All Topics</p>
       <MultiCarousel>
         {posts.map((post) => (
-          <PostsCard post={post}></PostsCard>
+          <PostsCard key={post?.title} post={post}></PostsCard>
         ))}
       </MultiCarousel>
     </section>

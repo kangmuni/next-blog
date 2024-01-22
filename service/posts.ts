@@ -21,7 +21,17 @@ export async function getNonFeaturedPosts(): Promise<Posts[]> {
     .then((posts) => posts.filter((post) => !post.featured));
 }
 
+// export const getAllPosts = cache(async () => {
+//   console.log('getAllPosts');
+
+//   const filePath = path.join(process.cwd(), 'data', 'posts.json');
+//   const data = await fs.readFile(filePath, 'utf-8');
+//   return JSON.parse(data);
+// });
+
 export async function getAllPosts(): Promise<Posts[]> {
+  console.log('getAllPosts');
+
   const filePath = path.join(process.cwd(), 'data', 'posts.json');
   const data = await fs.readFile(filePath, 'utf-8');
   return JSON.parse(data);

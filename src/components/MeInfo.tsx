@@ -7,7 +7,7 @@ export default function MeInfo() {
     <section className="flex w-9/12 items-center h-screen">
       <div className="w-4/5 tracking-normal">
         <p className="text-4xl font-semibold pb-8 leading-noramal">
-          Hi, I'm Muni Kang, I'm a front-end engineer.
+          Hi, I am Muni Kang, I am a front-end engineer.
         </p>
         <p className="text-4xl text-slate-600 pb-8 leading-normal">
           I love making applications that create new values for the world.
