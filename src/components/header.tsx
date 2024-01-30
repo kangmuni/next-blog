@@ -4,7 +4,7 @@ export default function Header() {
   return (
     <header className="flex justify-between p-9 pb-0">
       <Link href="/" className="text-3xl font-semibold">
-        Muni Blog
+        {`Muni's Blog`}
       </Link>
       <nav className="text-lg text-slate-500 font-medium">
         <Link href="/" className="pr-4">

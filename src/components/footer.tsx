@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import LinkButton from './LinkButton';
 
 export default function Footer() {
   return (
@@ -14,10 +15,7 @@ export default function Footer() {
               </p>
             </div>
             <div>
-              <Link href="/" className="pr-2">
-                gitHub
-              </Link>
-              <Link href="/">profile</Link>
+              <LinkButton />
             </div>
 
             <div>
